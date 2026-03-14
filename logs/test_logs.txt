@@ -1,0 +1,13 @@
+No files changed, compilation skipped
+
+Ran 7 tests for test/BankTest.t.sol:BankTest
+[PASS] testAdminWithdraw() (gas: 123200)
+[PASS] testDepositBalanceUpdate() (gas: 112985)
+[PASS] testNonAdminCannotWithdraw() (gas: 90469)
+[PASS] testTopDepositors_1User() (gas: 93786)
+[PASS] testTopDepositors_2Users() (gas: 156986)
+[PASS] testTopDepositors_3Users() (gas: 221321)
+[PASS] testTopDepositors_4Users_RepeatDeposit() (gas: 288976)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 1.42ms (1.68ms CPU time)
+
+Ran 1 test suite in 12.45s (1.42ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)
