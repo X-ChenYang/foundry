@@ -1,0 +1,96 @@
+Compiling 45 files with Solc 0.8.33
+Solc 0.8.33 finished in 799.19ms
+Compiler run successful with warnings:
+Warning (2018): Function state mutability can be restricted to view
+  --> test/NFTMarketTest.t.sol:58:5:
+   |
+58 |     function invariant_NoTokenHeld() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 12 tests for test/NFTMarketTest.t.sol:NFTMarketTest
+[PASS] invariant_NoTokenHeld() (runs: 256, calls: 128000, reverts: 85533)
+
+╭-----------+-------------------+-------+---------+----------╮
+| Contract  | Selector          | Calls | Reverts | Discards |
++============================================================+
+| MockERC20 | approve           | 10707 | 0       | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | mint              | 10511 | 386     | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | transfer          | 10715 | 10540   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | transferFrom      | 10713 | 10564   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | approve           | 10794 | 10793   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | mint              | 10676 | 5       | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | safeTransferFrom  | 21188 | 21188   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | setApprovalForAll | 10654 | 15      | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | transferFrom      | 10722 | 10722   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | buyNFT            | 10700 | 10700   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | listNFT           | 10620 | 10620   | 0        |
+╰-----------+-------------------+-------+---------+----------╯
+
+[PASS] testBuyNFT_Fail_BuyOwnNFT() (gas: 189)
+[PASS] testBuyNFT_Fail_DuplicateBuy() (gas: 211)
+[PASS] testBuyNFT_Fail_ExcessAmount() (gas: 188)
+[PASS] testBuyNFT_Fail_InsufficientAmount() (gas: 253)
+[PASS] testBuyNFT_Fail_NotListed() (gas: 255)
+[PASS] testBuyNFT_Success() (gas: 210)
+[PASS] testListNFT_Fail_AlreadyListed() (gas: 255)
+[PASS] testListNFT_Fail_NoApproval() (gas: 211)
+[PASS] testListNFT_Fail_NotOwner() (gas: 209)
+[PASS] testListNFT_Fail_ZeroPrice() (gas: 233)
+[PASS] testListNFT_Success() (gas: 233)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 7.48s (7.48s CPU time)
+
+Ran 13 tests for test/NFTMarketFuzzTest.t.sol:NFTMarketFuzzTest
+[PASS] invariant_NoTokenHeld() (runs: 256, calls: 128000, reverts: 85311)
+
+╭-----------+-------------------+-------+---------+----------╮
+| Contract  | Selector          | Calls | Reverts | Discards |
++============================================================+
+| MockERC20 | approve           | 10738 | 0       | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | mint              | 10734 | 379     | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | transfer          | 10728 | 10573   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockERC20 | transferFrom      | 10739 | 10600   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | approve           | 10710 | 10710   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | mint              | 10717 | 1       | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | safeTransferFrom  | 21249 | 21249   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | setApprovalForAll | 10600 | 14      | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MockNFT   | transferFrom      | 10588 | 10588   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | buyNFT            | 10526 | 10526   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | listNFT           | 10671 | 10671   | 0        |
+╰-----------+-------------------+-------+---------+----------╯
+
+[PASS] testBuyNFT_Fail_BuyOwnNFT() (gas: 189)
+[PASS] testBuyNFT_Fail_DuplicateBuy() (gas: 211)
+[PASS] testBuyNFT_Fail_ExcessAmount() (gas: 188)
+[PASS] testBuyNFT_Fail_InsufficientAmount() (gas: 253)
+[PASS] testBuyNFT_Fail_NotListed() (gas: 255)
+[PASS] testBuyNFT_Success() (gas: 210)
+[PASS] testFuzz_ListAndBuyNFT(uint256,address) (runs: 256, μ: 224137, ~: 224332)
+[PASS] testListNFT_Fail_AlreadyListed() (gas: 188)
+[PASS] testListNFT_Fail_NoApproval() (gas: 211)
+[PASS] testListNFT_Fail_NotOwner() (gas: 209)
+[PASS] testListNFT_Fail_ZeroPrice() (gas: 233)
+[PASS] testListNFT_Success() (gas: 255)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 7.48s (7.58s CPU time)
+
+Ran 2 test suites in 67.91s (14.97s CPU time): 25 tests passed, 0 failed, 0 skipped (25 total tests)
